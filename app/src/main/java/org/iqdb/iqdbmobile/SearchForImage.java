@@ -58,8 +58,7 @@ public class SearchForImage extends AppCompatActivity {
         Call<ResponseBody> call = service.upload(MAX_FILE_SIZE, serviceList, requestFileBody);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
-            public void onResponse(Call<ResponseBody> call,
-                                   Response<ResponseBody> response) {
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 try {
 //                    Now parse the HTML response here
                     String textResponse = response.body().string();
